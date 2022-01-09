@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>club.mineplex</groupId>
+    <artifactId>community-parent</artifactId>
+    <version>1.0-RELEASE</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>bot-discord</module>
+        <module>bot-milestones</module>
+        <module>bot-minecraft</module>
+        <module>restapi</module>
+        <module>core-common</module>
+    </modules>
+
+    <!-- Project Information -->
+    <name>Mineplex Community Project</name>
+    <description>Project repository for all Mineplex-related projects</description>
+    <url>https://github.com/RF-Development</url>
+
+    <organization>
+        <name>RF Development</name>
+        <url>https://github.com/RF-Development</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>rey</id>
+            <name>Rey</name>
+            <email>reymainmail@gmail.com</email>
+            <url>https://github.com/rey-dev/</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
