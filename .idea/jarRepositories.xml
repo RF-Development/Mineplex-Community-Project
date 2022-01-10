@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="mvnrepository.com" />
+      <option name="name" value="mvnrepository.com" />
+      <option name="url" value="mvnrepository.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jcenter" />
+      <option name="name" value="jcenter-bintray" />
+      <option name="url" value="http://jcenter.bintray.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\discord-bot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex\CommunityBot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jitpack.io" />
+      <option name="name" value="jitpack.io" />
+      <option name="url" value="https://jitpack.io" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jcenter" />
+      <option name="name" value="jcenter-bintray" />
+      <option name="url" value="https://jcenter.bintray.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\bot-discord/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\milestones-bot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="personal" />
+      <option name="name" value="GitHub rey-dev ServerUtils" />
+      <option name="url" value="https://maven.pkg.github.com/rey-dev/ServerUtils" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\bot-milestones/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\DiscordBot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex Community\MilestonesBot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nukkitx-repo-snapshot" />
+      <option name="name" value="nukkitx-repo-snapshot" />
+      <option name="url" value="https://repo.nukkitx.com/maven-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex\Milestones-Birthdays/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nukkitx-repo-release" />
+      <option name="name" value="nukkitx-repo-release" />
+      <option name="url" value="https://repo.nukkitx.com/maven-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex\DiscordBot/libs" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="GitHub Mineplex-Community LegoBot" />
+      <option name="url" value="https://github.com/mineplex-community/LegoBot" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="bungeecord-repo" />
+      <option name="name" value="bungeecord-repo" />
+      <option name="url" value="https://oss.sonatype.org/content/repositories/snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="bintray-jcenter" />
+      <option name="name" value="jcenter" />
+      <option name="url" value="https://jcenter.bintray.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-repository" />
+      <option name="name" value="maven-repository" />
+      <option name="url" value="file:///C:\Users\PC\IdeaProjects\Mineplex\MilestonesBot/libs" />
+    </remote-repository>
+  </component>
+</project>
