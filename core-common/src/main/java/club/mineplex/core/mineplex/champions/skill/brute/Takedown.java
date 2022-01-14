@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Takedown extends ChampionsSkill implements IRechargeable {
 
-    public Takedown() {
+    protected Takedown() {
         super("Takedown", Type.AXE, 5);
     }
 

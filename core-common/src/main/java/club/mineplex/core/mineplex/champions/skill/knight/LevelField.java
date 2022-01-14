@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class LevelField extends ChampionsSkill implements IRechargeable, IActivatable {
 
-    public LevelField() {
+    protected LevelField() {
         super("Level Field", Type.PASSIVE_B, 3);
     }
 

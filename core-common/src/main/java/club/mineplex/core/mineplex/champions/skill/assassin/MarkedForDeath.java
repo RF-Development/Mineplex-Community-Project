@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class MarkedForDeath extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public MarkedForDeath() {
+    protected MarkedForDeath() {
         super("Marked for Death", Type.BOW, 4);
     }
 

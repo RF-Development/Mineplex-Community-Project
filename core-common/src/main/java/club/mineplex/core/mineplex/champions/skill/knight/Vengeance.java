@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Vengeance extends ChampionsSkill {
 
-    public Vengeance() {
+    protected Vengeance() {
         super("Vengeance", Type.PASSIVE_B, 3);
     }
 

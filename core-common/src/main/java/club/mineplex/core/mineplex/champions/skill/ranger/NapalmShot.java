@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class NapalmShot extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public NapalmShot() {
+    protected NapalmShot() {
         super("Napalm Shot", Type.BOW, 4);
     }
 

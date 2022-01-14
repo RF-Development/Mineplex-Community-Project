@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Recall extends ChampionsSkill implements IRechargeable {
 
-    public Recall() {
+    protected Recall() {
         super("Recall", Type.PASSIVE_A, 3);
         this.setSubSkills(new SubSkill[]{new SecondaryRecall()});
     }

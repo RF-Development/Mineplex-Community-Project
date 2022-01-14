@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class FireBlast extends ChampionsSkill implements IEnergyConsumer, IRechargeable {
 
-    public FireBlast() {
+    protected FireBlast() {
         super("Fire Blast", Type.AXE, 5);
     }
 

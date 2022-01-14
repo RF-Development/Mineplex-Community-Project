@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class ShieldSmash extends ChampionsSkill implements IRechargeable {
 
-    public ShieldSmash() {
+    protected ShieldSmash() {
         super("Shield Smash", Type.AXE, 5);
     }
 

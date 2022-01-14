@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IToggleable;
 
 public class Immolate extends ChampionsSkill implements IToggleable, IEnergyConsumer.PerSecond {
 
-    public Immolate() {
+    protected Immolate() {
         super("Immolate", Type.PASSIVE_A, 1);
     }
 

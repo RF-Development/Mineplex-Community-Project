@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class WolfsPounce extends ChampionsSkill implements IChargeable, IRechargeable {
 
-    public WolfsPounce() {
+    protected WolfsPounce() {
         super("Wolfs Pounce", Type.SWORD, 4);
     }
 

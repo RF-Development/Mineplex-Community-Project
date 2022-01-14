@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class DefensiveStance extends ChampionsSkill {
 
-    public DefensiveStance() {
+    protected DefensiveStance() {
         super("Defensive Stance", Type.SWORD, 5);
     }
 

@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class RopedArrow extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public RopedArrow() {
+    protected RopedArrow() {
         super("RopedArrow", Type.BOW, 4);
     }
 

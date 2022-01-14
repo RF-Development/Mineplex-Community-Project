@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class SmokeBomb extends ChampionsSkill implements IRechargeable {
 
-    public SmokeBomb() {
+    protected SmokeBomb() {
         super("Smoke Bomb", Type.PASSIVE_A, 3);
     }
 

@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class ManaRegeneration extends ChampionsSkill {
 
-    public ManaRegeneration() {
+    protected ManaRegeneration() {
         super("Mana Regeneration", Type.GLOBAL_PASSIVE, 3);
     }
 

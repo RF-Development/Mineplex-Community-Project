@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class BlockToss extends ChampionsSkill implements IRechargeable, IChargeable {
 
-    public BlockToss() {
+    protected BlockToss() {
         super("Block Toss", Type.SWORD, 5);
     }
 

@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class VitalitySpores extends ChampionsSkill {
 
-    public VitalitySpores() {
+    protected VitalitySpores() {
         super("Vitality Spores", Type.PASSIVE_A, 3);
     }
 

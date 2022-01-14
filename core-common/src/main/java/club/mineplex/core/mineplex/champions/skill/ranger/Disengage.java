@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Disengage extends ChampionsSkill implements IRechargeable, IPreparable {
 
-    public Disengage() {
+    protected Disengage() {
         super("Disengage", Type.SWORD, 4);
     }
 

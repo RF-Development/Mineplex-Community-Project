@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IEnergyConsumer;
 
 public class Rupture extends ChampionsSkill implements IChargeable, IEnergyConsumer.PerSecond {
 
-    public Rupture() {
+    protected Rupture() {
         super("Rupture", Type.SWORD, 5);
     }
 

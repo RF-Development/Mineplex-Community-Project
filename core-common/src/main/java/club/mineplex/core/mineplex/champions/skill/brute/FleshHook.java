@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class FleshHook extends ChampionsSkill implements IChargeable, IRechargeable {
 
-    public FleshHook() {
+    protected FleshHook() {
         super("Flesh Hook", Type.SWORD, 5);
     }
 

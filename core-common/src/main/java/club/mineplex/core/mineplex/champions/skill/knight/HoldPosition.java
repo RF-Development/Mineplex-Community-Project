@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class HoldPosition extends ChampionsSkill implements IRechargeable {
 
-    public HoldPosition() {
+    protected HoldPosition() {
         super("Hold Position", Type.AXE, 5);
     }
 

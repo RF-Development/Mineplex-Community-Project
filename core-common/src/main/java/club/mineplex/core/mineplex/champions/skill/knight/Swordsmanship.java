@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Swordsmanship extends ChampionsSkill {
 
-    public Swordsmanship() {
+    protected Swordsmanship() {
         super("Swordsmanship", Type.PASSIVE_A, 3);
     }
 

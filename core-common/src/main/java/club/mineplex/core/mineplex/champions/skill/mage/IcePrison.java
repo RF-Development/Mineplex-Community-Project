@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class IcePrison extends ChampionsSkill implements IEnergyConsumer, IRechargeable {
 
-    public IcePrison() {
+    protected IcePrison() {
         super("Ice Prison", Type.AXE, 5);
     }
 

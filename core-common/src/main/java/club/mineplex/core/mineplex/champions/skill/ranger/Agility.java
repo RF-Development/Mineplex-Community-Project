@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Agility extends ChampionsSkill implements IRechargeable {
 
-    public Agility() {
+    protected Agility() {
         super("Agility", Type.AXE, 4);
     }
 

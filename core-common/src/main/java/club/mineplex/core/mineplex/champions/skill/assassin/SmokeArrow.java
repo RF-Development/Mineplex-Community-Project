@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class SmokeArrow extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public SmokeArrow() {
+    protected SmokeArrow() {
         super("Smoke Arrow", Type.BOW, 4);
     }
 

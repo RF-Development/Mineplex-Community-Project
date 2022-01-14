@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class BarbedArrows extends ChampionsSkill {
 
-    public BarbedArrows() {
+    protected BarbedArrows() {
         super("Barbed Arrows", Type.PASSIVE_B, 3);
     }
 

@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Longshot extends ChampionsSkill implements IRechargeable {
 
-    public Longshot() {
+    protected Longshot() {
         super("Longshot", Type.PASSIVE_B, 3);
     }
 

@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class WhirlwindAxe extends ChampionsSkill implements IRechargeable {
 
-    public WhirlwindAxe() {
+    protected WhirlwindAxe() {
         super("Whirlwind Axe", Type.AXE, 5);
     }
 

@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class ViperStrikes extends ChampionsSkill {
 
-    public ViperStrikes() {
+    protected ViperStrikes() {
         super("Viper Strikes", Type.PASSIVE_B, 3);
     }
 

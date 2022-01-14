@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Intimidation extends ChampionsSkill implements IRechargeable, IActivatable {
 
-    public Intimidation() {
+    protected Intimidation() {
         super("Intimidation", Type.PASSIVE_A, 5);
     }
 

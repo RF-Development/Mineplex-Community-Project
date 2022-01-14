@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IEnergyConsumer;
 
 public class Inferno extends ChampionsSkill implements IEnergyConsumer.PerSecond {
 
-    public Inferno() {
+    protected Inferno() {
         super("Inferno", Type.SWORD, 5);
     }
 

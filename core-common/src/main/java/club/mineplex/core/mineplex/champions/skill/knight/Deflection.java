@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Deflection extends ChampionsSkill {
 
-    public Deflection() {
+    protected Deflection() {
         super("Deflection", Type.PASSIVE_A, 3);
     }
 

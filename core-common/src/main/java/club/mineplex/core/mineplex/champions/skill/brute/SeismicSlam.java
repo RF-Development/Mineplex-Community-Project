@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class SeismicSlam extends ChampionsSkill implements IRechargeable {
 
-    public SeismicSlam() {
+    protected SeismicSlam() {
         super("Seismic Slam", Type.AXE, 5);
     }
 

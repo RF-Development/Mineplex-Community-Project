@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Evade extends ChampionsSkill implements IRechargeable, IPreparable {
 
-    public Evade() {
+    protected Evade() {
         super("Evade", Type.SWORD, 1);
     }
 

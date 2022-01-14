@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Sharpshooter extends ChampionsSkill {
 
-    public Sharpshooter() {
+    protected Sharpshooter() {
         super("Sharpshooter", Type.PASSIVE_B, 3);
     }
 

@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Overwhelm extends ChampionsSkill {
 
-    public Overwhelm() {
+    protected Overwhelm() {
         super("Overwhelm", Type.PASSIVE_B, 3);
     }
 

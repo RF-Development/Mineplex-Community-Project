@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class ExplosiveArrow extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public ExplosiveArrow() {
+    protected ExplosiveArrow() {
         super("Explosive Arrow", Type.BOW, 4);
     }
 

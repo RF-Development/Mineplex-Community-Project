@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IChargeable;
 
 public class Overcharge extends ChampionsSkill implements IChargeable {
 
-    public Overcharge() {
+    protected Overcharge() {
         super("Overcharge", Type.PASSIVE_A, 3);
     }
 

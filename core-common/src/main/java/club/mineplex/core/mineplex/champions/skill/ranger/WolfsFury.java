@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class WolfsFury extends ChampionsSkill implements IRechargeable {
 
-    public WolfsFury() {
+    protected WolfsFury() {
         super("Wolfs Fury", Type.AXE, 4);
     }
 

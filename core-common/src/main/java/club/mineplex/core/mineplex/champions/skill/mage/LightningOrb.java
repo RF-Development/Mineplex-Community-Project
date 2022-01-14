@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class LightningOrb extends ChampionsSkill implements IEnergyConsumer, IRechargeable {
 
-    public LightningOrb() {
+    protected LightningOrb() {
         super("Lightning Orb", Type.AXE, 5);
     }
 

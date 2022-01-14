@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class RopedAxeThrow extends ChampionsSkill implements IRechargeable {
 
-    public RopedAxeThrow() {
+    protected RopedAxeThrow() {
         super("Roped Axe Throw", Type.AXE, 5);
     }
 

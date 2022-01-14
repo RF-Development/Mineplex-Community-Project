@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class BullsCharge extends ChampionsSkill implements IRechargeable {
 
-    public BullsCharge() {
+    protected BullsCharge() {
         super("Bulls Charge", Type.AXE, 5);
     }
 

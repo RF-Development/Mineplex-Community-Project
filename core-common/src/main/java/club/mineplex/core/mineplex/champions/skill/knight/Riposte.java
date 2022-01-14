@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Riposte extends ChampionsSkill implements IRechargeable, IPreparable {
 
-    public Riposte() {
+    protected Riposte() {
         super("Riposte", Type.SWORD, 5);
     }
 

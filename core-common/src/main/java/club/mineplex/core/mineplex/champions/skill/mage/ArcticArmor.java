@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IToggleable;
 
 public class ArcticArmor extends ChampionsSkill implements IToggleable, IEnergyConsumer.PerSecond {
 
-    public ArcticArmor() {
+    protected ArcticArmor() {
         super("Arctic Armor", Type.PASSIVE_A, 3);
     }
 

@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IChargeable;
 
 public class Barrage extends ChampionsSkill implements IChargeable {
 
-    public Barrage() {
+    protected Barrage() {
         super("Barrage", Type.PASSIVE_A, 3);
     }
 

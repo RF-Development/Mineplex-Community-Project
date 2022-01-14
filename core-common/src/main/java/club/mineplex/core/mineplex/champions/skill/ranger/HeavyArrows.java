@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class HeavyArrows extends ChampionsSkill {
 
-    public HeavyArrows() {
+    protected HeavyArrows() {
         super("Heavy Arrows", Type.PASSIVE_B, 3);
     }
 

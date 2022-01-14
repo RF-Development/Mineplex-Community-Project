@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class MagmaBlade extends ChampionsSkill {
 
-    public MagmaBlade() {
+    protected MagmaBlade() {
         super("Magma Blade", Type.PASSIVE_B, 3);
     }
 

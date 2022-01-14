@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class GlacialBlade extends ChampionsSkill implements IEnergyConsumer, IRechargeable {
 
-    public GlacialBlade() {
+    protected GlacialBlade() {
         super("Glacial Blade", Type.PASSIVE_B, 3);
     }
 

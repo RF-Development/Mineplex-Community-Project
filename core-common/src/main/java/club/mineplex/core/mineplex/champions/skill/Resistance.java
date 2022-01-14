@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Resistance extends ChampionsSkill {
 
-    public Resistance() {
+    Resistance() {
         super("Resistance", Type.GLOBAL_PASSIVE, 3);
     }
 

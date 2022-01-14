@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class SilencingArrow extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public SilencingArrow() {
+    protected SilencingArrow() {
         super("Silencing Arrow", Type.BOW, 4);
     }
 

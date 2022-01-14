@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Bloodlust extends ChampionsSkill {
 
-    public Bloodlust() {
+    protected Bloodlust() {
         super("Bloodlust", Type.PASSIVE_A, 3);
     }
 

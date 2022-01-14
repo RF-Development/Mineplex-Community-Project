@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class ComboAttack extends ChampionsSkill {
 
-    public ComboAttack() {
+    protected ComboAttack() {
         super("Combo Attack", Type.PASSIVE_B, 3);
     }
 

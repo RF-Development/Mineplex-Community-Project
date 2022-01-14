@@ -7,7 +7,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class StaticLazer extends ChampionsSkill implements IChargeable, IRechargeable, IEnergyConsumer.PerSecond {
 
-    public StaticLazer() {
+    protected StaticLazer() {
         super("Static Lazer", Type.SWORD, 5);
     }
 

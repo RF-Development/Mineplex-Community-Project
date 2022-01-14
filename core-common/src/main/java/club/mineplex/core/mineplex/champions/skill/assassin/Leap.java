@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Leap extends ChampionsSkill implements IRechargeable {
 
-    public Leap() {
+    protected Leap() {
         super("Leap", Type.AXE, 4);
         this.setSubSkills(new SubSkill[]{new WallKick()});
     }

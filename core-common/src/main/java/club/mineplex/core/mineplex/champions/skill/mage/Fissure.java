@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Fissure extends ChampionsSkill implements IEnergyConsumer, IRechargeable {
 
-    public Fissure() {
+    protected Fissure() {
         super("Fissure", Type.AXE, 5);
     }
 

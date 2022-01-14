@@ -21,6 +21,25 @@ public abstract class ChampionsSkill {
     private SubSkill[] subSkills = new SubSkill[0];
 
     /**
+     * @param name The name of the skill
+     * @return An instance of the skill whose name matches with the one provided
+     * @throws IllegalArgumentException If the name provided is not a valid skill
+     */
+    public static ChampionsSkill ofName(final String name) {
+        for (final ChampionsKit value : ChampionsKit.values()) {
+            for (final ChampionsSkill skill : value.getSkills()) {
+                if (!skill.getName().equals(name)) {
+                    continue;
+                }
+
+                return skill;
+            }
+        }
+
+        throw new IllegalArgumentException("Name provided is not a valid skill");
+    }
+
+    /**
      * Used to obtain a value from a string formula like the following: "#X#Y";
      * where 'X' stands for the base number in the formula, and 'Y' for the modifier,
      * which is then multiplied by the level and added to the base value.

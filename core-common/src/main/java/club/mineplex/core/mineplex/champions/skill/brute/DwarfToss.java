@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class DwarfToss extends ChampionsSkill implements IRechargeable, IChargeable {
 
-    public DwarfToss() {
+    protected DwarfToss() {
         super("Dwarf Toss", Type.SWORD, 1);
     }
 

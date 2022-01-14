@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class Cleave extends ChampionsSkill {
 
-    public Cleave() {
+    protected Cleave() {
         super("Cleave", Type.PASSIVE_A, 3);
     }
 

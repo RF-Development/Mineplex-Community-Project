@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class PinDown extends ChampionsSkill implements IRechargeable {
 
-    public PinDown() {
+    protected PinDown() {
         super("Pin Down", Type.BOW, 4);
     }
 

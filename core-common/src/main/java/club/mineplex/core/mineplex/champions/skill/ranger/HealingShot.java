@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class HealingShot extends ChampionsSkill implements IRechargeable, IPreparableArrow {
 
-    public HealingShot() {
+    protected HealingShot() {
         super("Healing Shot", Type.BOW, 4);
     }
 

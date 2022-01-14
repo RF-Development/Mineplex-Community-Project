@@ -4,7 +4,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 
 public class NullBlade extends ChampionsSkill {
 
-    public NullBlade() {
+    protected NullBlade() {
         super("Null Blade", Type.PASSIVE_B, 3);
     }
 

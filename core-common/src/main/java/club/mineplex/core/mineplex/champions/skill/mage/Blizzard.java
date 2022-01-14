@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IEnergyConsumer;
 
 public class Blizzard extends ChampionsSkill implements IEnergyConsumer.PerSecond {
 
-    public Blizzard() {
+    protected Blizzard() {
         super("Blizzard", Type.SWORD, 5);
     }
 

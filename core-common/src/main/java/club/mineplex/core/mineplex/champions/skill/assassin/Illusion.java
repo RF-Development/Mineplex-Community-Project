@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.shop.IRechargeable;
 
 public class Illusion extends ChampionsSkill implements IRechargeable {
 
-    public Illusion() {
+    protected Illusion() {
         super("Illusion", Type.SWORD, 4);
     }
 

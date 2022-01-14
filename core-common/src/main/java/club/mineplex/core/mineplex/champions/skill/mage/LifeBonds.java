@@ -6,7 +6,7 @@ import club.mineplex.core.mineplex.champions.shop.IToggleable;
 
 public class LifeBonds extends ChampionsSkill implements IToggleable, IEnergyConsumer.PerSecond {
 
-    public LifeBonds() {
+    protected LifeBonds() {
         super("Life Bonds", Type.PASSIVE_A, 3);
     }
 
