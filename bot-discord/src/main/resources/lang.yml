@@ -1,0 +1,25 @@
+################
+# DESCRIPTIONS #
+################
+
+help-description: "Displays help UI"
+joke-description: "Gives you a random joke"
+mcnames-description: "Displays user name history"
+ping-description: "Displays the bot's ping"
+server-description: "Information of the discord server"
+suggest-description: "Suggests an idea"
+user-description: "Information of the discord user"
+promote-description: "Give a player a role"
+demote-description: "Revoke a role from a player"
+attach-description: "Attach an image"
+blacklist-description: "Blacklist a user from suggestions"
+blacklists-description: "View current blacklisted users"
+setcounter-description: "Set the current ideeas counter"
+suggestions-description: "Manage suggestions module"
+reload-description: "Reloads the bot's configuration"
+setarchive-description: "Sets the archived channels category"
+archive-description: "Archives a channel"
+gend-description: "End an active giveaway"
+gstart-description: "Start a giveaway"
+greroll-description: "Reroll a giveaway"
+staff-description: "Show staff members part of a certain rank"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Extra logging related to initialization of Log4j.
+ Set to debug or trace if log4j initialization is failing. -->
+<Configuration status="warn">
+    <Appenders>
+        <!-- Console appender configuration -->
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout
+                    disableAnsi=" false"
+                    pattern="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}
+        %highlight{${LOG_LEVEL_PATTERN:-%5p}}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green
+        bold, TRACE=blue} [%15.15t] %style{%-40.40C{1.}}{cyan} :
+        %m%n"
+            />
+
+        </Console>
+        <!-- Chat appender configuration -->
+        <Console name="chat" target="SYSTEM_OUT" follow="true">
+            <PatternLayout
+                    disableAnsi=" false"
+                    pattern="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}
+         %5style{CHAT}{green} %m%n"
+            />
+
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Root logger referring to console appender -->
+        <Root level="DEBUG" additivity="false">
+            <AppenderRef ref="console"/>
+        </Root>
+
+        <Logger name="MinecraftChat" level="info" additivity="false">
+            <AppenderRef ref="chat" level="info"/>
+        </Logger>
+        <Logger name="MCProtocol" level="debug" additivity="false">
+            <AppenderRef ref="console" level="debug"/>
+        </Logger>
+    </Loggers>
+</Configuration>

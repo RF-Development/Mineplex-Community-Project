@@ -1,0 +1,21 @@
+[ {
+  "name" : "drop-prevention",
+  "staffOnly" : false,
+  "enabled" : true
+}, {
+  "name" : "enhanced-mounts",
+  "staffOnly" : false,
+  "enabled" : true
+}, {
+  "name" : "mineplex-server-checker",
+  "staffOnly" : false,
+  "enabled" : true
+}, {
+  "name" : "slot-lock",
+  "staffOnly" : false,
+  "enabled" : false
+}, {
+  "name" : "message-filter",
+  "staffOnly" : false,
+  "enabled" : true
+} ]

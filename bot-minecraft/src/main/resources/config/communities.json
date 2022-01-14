@@ -1,0 +1,20 @@
+[
+  {
+    "name": "StaffRequest",
+    "webhookLinks": [
+      ""
+    ]
+  },
+  {
+    "name": "ClansRequest",
+    "webhookLinks": [
+      ""
+    ]
+  },
+  {
+    "name": "Bot",
+    "webhookLinks": [
+      ""
+    ]
+  }
+]

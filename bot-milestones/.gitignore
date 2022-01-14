@@ -1,0 +1,5 @@
+**/target/
+**/dashbord/
+.idea/
+artifacts/
+/config.yml

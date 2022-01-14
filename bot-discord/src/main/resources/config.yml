@@ -1,0 +1,94 @@
+voice-channel-update-interval: 300
+player-count-channel: 812725065758015529
+player-count-name: 'Player Count: %count%'
+member-count-channel: 812724964041031710
+member-count-name: 'Member Count: %count%'
+
+elements-per-embed-page: 15
+cache-refresh-minutes: 5.0
+
+filter-enabled: true
+archive-enabled: true
+archive-roles:
+  - 737180423074873344
+  - 737180353080459324
+archive-view-role: 737180395371626546
+music-enabled: true
+counters-enabled: true
+giveaways-enabled: true
+meme-channels:
+  - 655598157496975410
+
+prefix: '!'
+tag-command-prefix: '-'
+music-command-prefix: "#"
+
+home-guild-id: 655522419460669481
+bot-token:
+
+dblacklist-role: 789290247124811786
+
+cmd-channels:
+  - 655598157496975410
+  - 651568642936537104
+  - 789277031593803786
+  - 655598157496975410
+
+optional-welcome-leave-channel: 655598157496975410
+optional-welcome-message: ":wave: New Member;Hey there, <@%id%>.;;Welcome to **%server%**. It's great to have you here!"
+optional-leave-message: ":pensive: Member Left;Bad news everyone... <@%id%> has left **%server%**, probably forever."
+
+admin-roles:
+  - 666678585272041492
+  - 655545451231051786
+
+admin-users:
+  - 164788187296694274
+
+staff-roles:
+  - 666680427205099591
+
+ideas-cooldown: 5
+jokes-cooldown: 15
+
+clickup-api-token: "pk_14719063_UI4C6N9Y29EMK4FZ1L5GJZ97M9EH9O7U"
+clickup-ideas-list-id: "41763118"
+clickup-status-name: "#1: UNPROCESSED IDEAS 💡"
+clickup-add-emote: 667924920918999071
+
+yes-emoji: 655594481789173790
+no-emoji: 655594482070454300
+neutral-emoji: 655594481634246667
+boost-emoji: 656629040890773514
+bot-emoji: 737332768631160903
+upvote-emoji: 749866629638127636
+downvote-emoji: 749866629617418342
+
+roles:
+  - '688950495200804865:688950411151015991:❤️'
+autoroles:
+  - 688950495200804865
+
+promote-demote-prefix: '+'
+allowed-promote-roles: [ 655545451231051786 ]
+
+promote-demote-roles:
+  cutierole:
+    id: 757088029734338690
+    role-aliases: [ test ]
+    can-apply-this-role: [ 123131232133321312 ]
+
+responses: [ 'soontm;Soon:tm: - The RnD division of Mineplex LLC bringing the future
+    to not right now.', xd;Stop;Laughing;Like;That ]
+
+bot-statuses:
+  - "ok lol"
+  - "test xd"
+  - "rey is smelly"
+  - "ok"
+  - "bye"
+
+status-update-interval: 10
+identifier: MCD
+bugreports-channel: 895456979227648062
+bugreports-enabled: true
