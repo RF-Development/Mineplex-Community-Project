@@ -17,7 +17,7 @@ public interface IPreparable {
      * for no cooldown.
      */
     default double getFailRecharge(final int level) {
-        return 0D;
+        return -1D;
     }
 
 }
