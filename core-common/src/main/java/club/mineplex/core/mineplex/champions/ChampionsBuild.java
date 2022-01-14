@@ -2,28 +2,28 @@ package club.mineplex.core.mineplex.champions;
 
 import club.mineplex.core.mineplex.champions.skill.BreakFall;
 import club.mineplex.core.mineplex.champions.skill.Resistance;
+import lombok.Data;
 import lombok.NonNull;
-import lombok.Value;
 
 import java.util.UUID;
 
-@Value
+@Data
 public class ChampionsBuild {
 
     final static ChampionsSkill RESISTANCE_SKILL = new Resistance();
     final static ChampionsSkill BREAKFALL_SKILL = new BreakFall();
 
     @NonNull
-    UUID uuid;
+    private final UUID uuid;
 
     @NonNull
-    ChampionsKit kit;
+    private final ChampionsKit kit;
 
-    Class<? extends ChampionsSkill> swordSkill;
-    Class<? extends ChampionsSkill> axeSkill;
-    Class<? extends ChampionsSkill> bowSkill;
-    Class<? extends ChampionsSkill> passiveASkill;
-    Class<? extends ChampionsSkill> passiveBSkill;
-    Class<? extends ChampionsSkill> globalPassiveSkill;
+    private Class<? extends ChampionsSkill> swordSkill;
+    private Class<? extends ChampionsSkill> axeSkill;
+    private Class<? extends ChampionsSkill> bowSkill;
+    private Class<? extends ChampionsSkill> passiveASkill;
+    private Class<? extends ChampionsSkill> passiveBSkill;
+    private Class<? extends ChampionsSkill> globalPassiveSkill;
 
 }
