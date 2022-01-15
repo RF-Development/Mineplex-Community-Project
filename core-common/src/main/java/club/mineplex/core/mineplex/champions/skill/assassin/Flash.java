@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.champions.ChampionsSkill;
 public class Flash extends ChampionsSkill {
 
     protected Flash() {
-        super("Leap", Type.AXE, 4);
+        super("Flash", Type.AXE, 4);
     }
 
 }
