@@ -18,7 +18,7 @@ public class RangerFactory extends SkillFactory {
     @Override
     protected ChampionsSkill[] createSkills() {
         return new ChampionsSkill[]{
-                new WolfsFury(), new Disengage(), // Sword
+                new WolfsPounce(), new Disengage(), // Sword
                 new WolfsFury(), new Agility(), // Axe
                 new NapalmShot(), new ExplosiveArrow(), new PinDown(), new RopedArrow(), new HealingShot(), // Bow
                 new Barrage(), new Overcharge(), new VitalitySpores(), // Passive A
