@@ -7,6 +7,8 @@ import club.mineplex.core.mineplex.champions.skill.knight.KnightFactory;
 import club.mineplex.core.mineplex.champions.skill.mage.MageFactory;
 import club.mineplex.core.mineplex.champions.skill.ranger.RangerFactory;
 
+import java.util.Arrays;
+
 public enum ChampionsKit {
 
     BRUTE("Brute", BruteFactory.getInstance()),
@@ -17,10 +19,12 @@ public enum ChampionsKit {
 
     private final ChampionsSkill[] skills;
     private final String name;
+    private final boolean usesBow;
 
     ChampionsKit(final String name, final SkillFactory skillFactory) {
         this.skills = skillFactory.getSkills();
         this.name = name;
+        this.usesBow = Arrays.stream(this.skills).anyMatch(skills -> skills.getType().equals(ChampionsSkill.Type.BOW));
     }
 
     public String getName() {
@@ -29,6 +33,10 @@ public enum ChampionsKit {
 
     public ChampionsSkill[] getSkills() {
         return this.skills;
+    }
+
+    public boolean usesBow() {
+        return this.usesBow;
     }
 
 }
