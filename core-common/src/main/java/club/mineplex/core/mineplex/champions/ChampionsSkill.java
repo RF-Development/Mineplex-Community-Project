@@ -86,7 +86,7 @@ public abstract class ChampionsSkill {
          *
          * @return Whether this subskill is independent of its parent
          */
-        protected abstract boolean isIndependent();
+        public abstract boolean isIndependent();
 
     }
 

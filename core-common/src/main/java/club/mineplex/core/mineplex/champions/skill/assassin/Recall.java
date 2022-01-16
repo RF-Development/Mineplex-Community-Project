@@ -22,7 +22,7 @@ public class Recall extends ChampionsSkill implements IRechargeable {
         }
 
         @Override
-        protected boolean isIndependent() {
+        public boolean isIndependent() {
             return false;
         }
 

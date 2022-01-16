@@ -22,7 +22,7 @@ public class Leap extends ChampionsSkill implements IRechargeable {
         }
 
         @Override
-        protected boolean isIndependent() {
+        public boolean isIndependent() {
             return true;
         }
 

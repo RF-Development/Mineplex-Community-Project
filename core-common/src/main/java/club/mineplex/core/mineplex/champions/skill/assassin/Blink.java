@@ -16,7 +16,7 @@ public class Blink extends ChampionsSkill {
         }
 
         @Override
-        protected boolean isIndependent() {
+        public boolean isIndependent() {
             return true;
         }
 
