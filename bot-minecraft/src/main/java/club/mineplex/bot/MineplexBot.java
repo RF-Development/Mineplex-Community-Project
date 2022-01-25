@@ -82,6 +82,14 @@ public class MineplexBot {
         final Scanner scanner = new Scanner(System.in);
         while (scanner.hasNextLine()) {
             final String nextLine = scanner.nextLine();
+
+            if (nextLine.equalsIgnoreCase(".savedatabase")) {
+                GlobalCacheRepository.getCache(CommunityCache.class).saveData();
+                final int elements = GlobalCacheRepository.getCache(CommunityCache.class).get().size();
+                log.info("Saved {} entries to the database.", elements);
+                continue;
+            }
+
             client.send(new ServerboundChatPacket(nextLine));
         }
     }
