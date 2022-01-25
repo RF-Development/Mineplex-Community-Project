@@ -32,8 +32,9 @@ public class CommunityManager {
     }
 
     public Community.CommunityPlayerData getPlayerData(final Community community, final UUID uuid) {
-        if (community.getPlayerData(uuid).isPresent()) {
-            return community.getPlayerData(uuid).get();
+        final Optional<Community.CommunityPlayerData> dataOpt = community.getPlayerData(uuid);
+        if (dataOpt.isPresent()) {
+            return dataOpt.get();
         }
 
         final Community.CommunityPlayerData defaultData = new Community.CommunityPlayerData(uuid.toString(), 0, 0, 0);
@@ -73,36 +74,44 @@ public class CommunityManager {
         final String title;
         boolean usePunishmentFooter = false;
 
+        final Color embedColor;
         switch (SystemMessage.valueOf(type)) {
             case COMMUNITY_BAN:
+                embedColor = Color.RED;
                 playerData.setBans(playerData.getBans() + 1);
                 cache.saveData();
                 final String bannedPlayerFormat = player.getName() + " (" + playerData.getBans() + ")";
                 title = String.format("%s has been banned by %s.", bannedPlayerFormat, staffName);
                 break;
             case COMMUNITY_UNBAN:
+                embedColor = Color.YELLOW;
                 final String unbannedPlayerFormat = player.getName() + " (" + playerData.getBans() + ")";
                 title = String.format("%s has been unbanned by %s.", unbannedPlayerFormat, staffName);
                 break;
             case COMMUNITY_KICK:
+                embedColor = Color.RED;
                 playerData.setKicks(playerData.getKicks() + 1);
                 cache.saveData();
                 final String kickedPlayerFormat = player.getName() + " (" + playerData.getKicks() + ")";
                 title = String.format("%s has been kicked by %s.", kickedPlayerFormat, staffName);
                 break;
             case COMMUNITY_JOIN:
+                embedColor = Color.GREEN;
                 title = String.format("%s has joined %s.", player.getName(), community.getName());
                 usePunishmentFooter = true;
                 break;
             case COMMUNITY_LEAVE:
+                embedColor = Color.RED;
                 title = String.format("%s has left %s.", player.getName(), community.getName());
                 usePunishmentFooter = true;
                 break;
             case COMMUNITY_INVITE:
+                embedColor = Color.GREEN;
                 title = String.format("%s has been invited by %s.", player.getName(), staffName);
                 usePunishmentFooter = true;
                 break;
             case COMMUNITY_UNINVITE:
+                embedColor = Color.YELLOW;
                 title = String.format("%s has been uninvited by %s.", player.getName(), staffName);
                 usePunishmentFooter = true;
                 break;
@@ -117,7 +126,9 @@ public class CommunityManager {
             );
         }
 
-        final Embed embed = Embed.builder().title(title).color(Color.RED).footer(footer).build();
+        final Embed embed =
+                Embed.builder().title(UtilText.getDiscordCompatibleText(title)).color(embedColor).footer(footer)
+                     .build();
         for (final String webhookLink : cache.getWebhookLinks(community.getName())) {
             WebhookMessage.builder()
                           .url(webhookLink)
@@ -149,12 +160,13 @@ public class CommunityManager {
 
         final Color color = Color.decode(rank.getPrefixColor().orElse(NamedTextColor.AQUA).asHexString());
 
+        final String title = (rank.equals(MineplexRank.PLAYER) ? "" : prefix) + player.getName();
         final Embed embed = Embed.builder()
                                  .color(color)
                                  .footer(new Embed.Footer(footer, null))
                                  .thumbnail(new Embed.Thumbnail(player.getAvatarUrl(), 100, 100))
                                  .description(UtilText.getDiscordCompatibleText(message.getText()))
-                                 .title((rank.equals(MineplexRank.PLAYER) ? "" : prefix) + player.getName())
+                                 .title(UtilText.getDiscordCompatibleText(title))
                                  .build();
 
         final CommunityCache cache = GlobalCacheRepository.getCache(CommunityCache.class);
