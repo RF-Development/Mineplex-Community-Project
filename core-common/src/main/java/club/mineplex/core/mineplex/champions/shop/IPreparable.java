@@ -1,7 +1,7 @@
 package club.mineplex.core.mineplex.champions.shop;
 
 /**
- * @apiNote Saved for skills that are prepared before use, like Disengage or Riposte
+ * Saved for skills that are prepared before use, like Disengage or Riposte
  */
 public interface IPreparable {
 

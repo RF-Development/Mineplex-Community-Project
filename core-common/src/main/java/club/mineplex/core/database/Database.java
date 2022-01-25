@@ -11,6 +11,9 @@ import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import javax.sql.DataSource;
 import java.io.File;
 
+/**
+ * A database
+ */
 public class Database {
 
     private static final Database INSTANCE = new Database();

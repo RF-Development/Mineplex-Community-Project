@@ -54,4 +54,5 @@ public enum MineplexRank {
     public Optional<NamedTextColor> getPrefixColor() {
         return Optional.ofNullable(this.prefixColor);
     }
+
 }

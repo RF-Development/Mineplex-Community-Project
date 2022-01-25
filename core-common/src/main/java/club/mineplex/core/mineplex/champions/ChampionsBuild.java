@@ -10,7 +10,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * @apiNote Skills are a Pair of the skill and its provided level
+ * A data class storing all build information bound to a user's UUID, like the {@link ChampionsKit kit} and the {@link
+ * ChampionsSkill skills} mapped by {@link ChampionsSkill.Type skill type}.
  */
 @Data
 @RequiredArgsConstructor
@@ -62,8 +63,9 @@ public class ChampionsBuild {
     }
 
     /**
-     * Get a ChampionsSkill and its level within the build
+     * Get a ChampionsSkill and its level within the build.
      *
+     * @param skillType The {@link ChampionsSkill.Type skill type} to query within the build.
      * @return An empty Optional if the skill type is not present in the build, or an Optional filled with a Pair of the
      * ChampionsSkill and its level within the build
      */
