@@ -58,7 +58,7 @@ public class CommunityCache extends Cache<Collection<Community>> {
         this.saveData();
     }
 
-    protected void saveData() {
+    public void saveData() {
         for (final Community community : this.communities.keySet()) {
             Database.getInstance().getJdbi().useExtension(CommunityDb.class, extension -> {
                 community.getPlayerData().forEach(data -> {
@@ -66,13 +66,16 @@ public class CommunityCache extends Cache<Collection<Community>> {
                     final int kicks = data.getKicks();
                     final int bans = data.getBans();
                     final long messages = data.getMessages();
-                    final String name = community.getName().toLowerCase();
+                    final String name = community.getName();
                     try {
                         extension.insertRow(name, playerUuid.toString(), messages, kicks, bans);
                     } catch (final UnableToExecuteStatementException e) {
                         if (e.getMessage().contains("Duplicate entry")) {
                             extension.updateRow(name, playerUuid.toString(), messages, kicks, bans);
+                            return;
                         }
+
+                        e.printStackTrace();
                     }
                 });
             });
