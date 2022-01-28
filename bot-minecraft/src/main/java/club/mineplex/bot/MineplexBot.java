@@ -18,6 +18,9 @@ import com.github.steveice10.mc.protocol.MinecraftProtocol;
 import com.github.steveice10.mc.protocol.data.status.handler.ServerInfoHandler;
 import com.github.steveice10.mc.protocol.packet.ingame.serverbound.ServerboundChatPacket;
 import com.github.steveice10.packetlib.Session;
+import com.github.steveice10.packetlib.event.session.ConnectedEvent;
+import com.github.steveice10.packetlib.event.session.DisconnectedEvent;
+import com.github.steveice10.packetlib.event.session.SessionAdapter;
 import com.github.steveice10.packetlib.tcp.TcpClientSession;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
@@ -48,6 +51,9 @@ public class MineplexBot {
     private static final File CONFIG_FOLDER;
     private static Session client;
     private static MinecraftProtocol protocol;
+
+    private static boolean IS_CONNECTED = true;
+    private static long DOWNTIME_START = System.currentTimeMillis();
 
     static {
         CONFIG_FOLDER = new File("config");
@@ -143,7 +149,6 @@ public class MineplexBot {
                 log.info("Successfully authenticated user: '{}'", protocol.getProfile().getName());
             } catch (final RequestException e) {
                 e.printStackTrace();
-                return;
             }
         } else {
             protocol = new MinecraftProtocol(account.getUsername());
@@ -160,8 +165,43 @@ public class MineplexBot {
         client.setFlag(MinecraftConstants.SESSION_SERVICE_KEY, sessionService);
         client.addListener(new ListenerChat());
         client.addListener(new ListenerConnectDisconnect());
+        client.addListener(new SessionAdapter() {
+            @Override
+            public void disconnected(final DisconnectedEvent event) {
+                MineplexBot.DOWNTIME_START = System.currentTimeMillis();
+
+                final long reconnectInterval = 15_000;
+                MineplexBot.IS_CONNECTED = false;
+                log.warn("Client disconnected, attempting to reconnect with a {} second interval",
+                         (reconnectInterval / 1000D)
+                );
+                MineplexBot.attemptReconnect(reconnectInterval);
+            }
+
+            @Override
+            public void connected(final ConnectedEvent event) {
+                if (!IS_CONNECTED) {
+                    log.info("Successfully reestablished connection with {}:{}. Downtime was {}ms.",
+                             HOST,
+                             PORT,
+                             System.currentTimeMillis() - MineplexBot.DOWNTIME_START
+                    );
+                }
+
+                MineplexBot.IS_CONNECTED = true;
+            }
+
+        });
 
         client.connect();
+    }
+
+    @SneakyThrows
+    private static void attemptReconnect(final long reconnectInterval) {
+        while (!MineplexBot.isConnected()) {
+            MineplexBot.connect();
+            Thread.sleep(reconnectInterval);
+        }
     }
 
     public static Session getClient() {
@@ -175,4 +215,9 @@ public class MineplexBot {
     public static Logger getLogger() {
         return log;
     }
+
+    private static boolean isConnected() {
+        return (client != null && client.isConnected()) || MineplexBot.IS_CONNECTED;
+    }
+
 }
