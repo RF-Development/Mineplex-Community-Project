@@ -2,7 +2,6 @@ package club.mineplex.discord.commands.all.content;
 
 import club.mineplex.core.discord.Embed;
 import club.mineplex.core.discord.WebhookMessage;
-import club.mineplex.core.util.UtilText;
 import club.mineplex.discord.BotUtil;
 import club.mineplex.discord.Main;
 import club.mineplex.discord.objects.DiscordUser;
@@ -83,7 +82,7 @@ public abstract class Content {
             }
 
             final String emojiMention = BotUtil.getEmoji(result.getEmoji()).getAsMention();
-            final String resultName = UtilText.getDiscordCompatibleText(result.name());
+            final String resultName = BotUtil.prettifyString(result.name());
 
             final EmbedBuilder eb = new EmbedBuilder()
                     .setColor(result.getColor())
@@ -132,7 +131,8 @@ public abstract class Content {
 
             final Message message = channel.sendMessageEmbeds(Collections.singletonList(eb.build())).complete();
             message.addReaction(BotUtil.getEmoji(Main.yesEmoji)).queue();
-            message.addReaction(BotUtil.getEmoji(Main.neutralEmoji)).queue();
+//            Removed because of Mineplex rules
+//            message.addReaction(BotUtil.getEmoji(Main.neutralEmoji)).queue();
             message.addReaction(BotUtil.getEmoji(Main.noEmoji)).queue();
         }
 

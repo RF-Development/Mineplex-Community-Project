@@ -135,6 +135,16 @@ public class BotUtil {
         return costs[s2.length()];
     }
 
+    public static String prettifyString(final String text) {
+        final StringBuilder str = new StringBuilder();
+        for (int i = 0; i < text.length(); i++) {
+            final String spaced = text.replaceAll("_", " ");
+            final String c = Character.toString(spaced.charAt(i)).toLowerCase();
+            str.append(i == 0 || spaced.charAt(i - 1) == ' ' ? c.toUpperCase() : c);
+        }
+        return str.toString();
+    }
+
     public static String mineplexScrape(final String url) throws IOException {
 
         final ConnectionBuilder conn = new ConnectionBuilder(url).method("GET");

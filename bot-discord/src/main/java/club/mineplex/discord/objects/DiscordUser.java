@@ -26,6 +26,7 @@ public class DiscordUser {
         if (toCheck == null) {
             return false;
         }
+
         for (final Member m : guild.getMembersWithRoles(toCheck)) {
             if (m.getIdLong() == this.user.getIdLong()) {
                 return true;

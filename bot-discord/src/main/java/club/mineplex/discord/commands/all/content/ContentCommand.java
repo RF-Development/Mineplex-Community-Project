@@ -80,14 +80,14 @@ public class ContentCommand extends SlashCommand {
             return;
         }
 
-        try {
-            final ReviewResult finalResult = result;
-            e.getChannel().retrieveMessageById(e.getMessageIdLong()).queue(message -> {
+        final ReviewResult finalResult = result;
+        e.getChannel().retrieveMessageById(e.getMessageIdLong()).queue(message -> {
+            try {
                 Content.Review.process(message, e.getMember().getUser(), finalResult);
-            });
-        } catch (final IllegalArgumentException ignored) {
+            } catch (final IllegalArgumentException ignored) {
 
-        }
+            }
+        });
     }
 
 }
