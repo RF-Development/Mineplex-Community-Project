@@ -2,10 +2,7 @@ package club.mineplex.discord;
 
 import club.mineplex.discord.commands.SlashCommand;
 import club.mineplex.discord.commands.all.*;
-import club.mineplex.discord.commands.events.christmas.AnswerCommand;
-import club.mineplex.discord.commands.events.christmas.RestartTriviaCommand;
-import club.mineplex.discord.commands.events.christmas.ResultsCommand;
-import club.mineplex.discord.commands.events.christmas.VoteCommand;
+import club.mineplex.discord.commands.all.content.ContentCommand;
 import club.mineplex.discord.commands.staff.ReloadCommand;
 import club.mineplex.discord.commands.staff.suggestions.BlacklistCommand;
 import club.mineplex.discord.commands.staff.suggestions.BlacklistsCommand;
@@ -80,6 +77,9 @@ public class Main extends ListenerAdapter {
     public static long blacklistRole;
     public static long welcomeAndLeaveChannel;
     public static long bugReportsChannel;
+    public static long contentReviewChannel;
+    public static long contentRole;
+    public static String contentShowcaseWebhook;
     public static String welcomeEmbedMessage;
     public static String leaveEmbedMessage;
     public static String identifier;
@@ -264,6 +264,10 @@ public class Main extends ListenerAdapter {
                 upvoteEmoji = config.get("upvote-emoji", Long.class);
                 downvoteEmoji = config.get("downvote-emoji", Long.class);
 
+                contentShowcaseWebhook = config.getOrDefault("content-webhook", String.class, null);
+                contentReviewChannel = config.getOrDefault("content-review-channel", Long.class, -1L);
+                contentRole = config.getOrDefault("content-role", Long.class, -1L);
+
                 PermissionHandler.PermissionLevel.ADMIN.setRoles(ADMIN_ROLES);
                 PermissionHandler.PermissionLevel.STAFF.setRoles(STAFF_ROLES);
 
@@ -286,12 +290,13 @@ public class Main extends ListenerAdapter {
 //                new StaffCommand(),
 //                new SubteamsCommand(),
                 new BugReportCommand(),
+                new ContentCommand(),
 
                 // CHRISTMAS
-                new AnswerCommand(),
-                new ResultsCommand(),
-                new RestartTriviaCommand(),
-                new VoteCommand(),
+//                new AnswerCommand(),
+//                new ResultsCommand(),
+//                new RestartTriviaCommand(),
+//                new VoteCommand(),
 
                 //STAFF
                 new BlacklistCommand(),
