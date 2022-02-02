@@ -10,17 +10,18 @@ public class MemeUpvotes extends ListenerAdapter {
 
     @Override
     public void onGuildMessageReceived(final GuildMessageReceivedEvent e) {
-
         if (e.getAuthor().isBot()) {
             return;
         }
+
         if (!Main.MEME_CHANNELS.contains(e.getChannel().getIdLong())) {
             return;
         }
 
-        final boolean isValidAttachment = e.getMessage().getAttachments().stream().anyMatch(a -> a.isImage() || a.isVideo())
-                || e.getMessage().getEmbeds().stream().anyMatch(z -> z.getType() == EmbedType.VIDEO
-                || z.getType() == EmbedType.IMAGE);
+        final boolean isValidAttachment =
+                e.getMessage().getAttachments().stream().anyMatch(a -> a.isImage() || a.isVideo())
+                        || e.getMessage().getEmbeds().stream().anyMatch(z -> z.getType() == EmbedType.VIDEO
+                        || z.getType() == EmbedType.IMAGE);
 
         if (!isValidAttachment) {
             return;

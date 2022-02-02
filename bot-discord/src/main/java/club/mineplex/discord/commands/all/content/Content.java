@@ -115,7 +115,7 @@ public abstract class Content {
                 throw new IllegalStateException("Home guild has not been loaded");
             }
 
-            final TextChannel channel = guild.getTextChannelById(Main.contentReviewChannel);
+            final TextChannel channel = Main.getJDA().getTextChannelById(Main.contentReviewChannel);
             if (channel == null) {
                 throw new RuntimeException("Content review channel does not exist!");
             }
