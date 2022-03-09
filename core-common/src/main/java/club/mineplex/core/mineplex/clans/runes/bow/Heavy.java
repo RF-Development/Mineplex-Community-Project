@@ -5,7 +5,7 @@ import club.mineplex.core.mineplex.clans.ClansRune;
 public class Heavy extends ClansRune {
 
     protected Heavy() {
-        super("Heavy", Type.BOW, UnitType.KNOCKBACK, 25F, 75F, true);
+        super("Heavy", UnitType.KNOCKBACK, 25F, 75F, true);
     }
 
 }
