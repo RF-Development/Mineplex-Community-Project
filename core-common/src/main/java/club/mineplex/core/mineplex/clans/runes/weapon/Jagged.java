@@ -1,12 +1,13 @@
 package club.mineplex.core.mineplex.clans.runes.weapon;
 
 import club.mineplex.core.mineplex.clans.ClansRune;
+import club.mineplex.core.mineplex.clans.RuneType;
 import club.mineplex.core.mineplex.clans.shop.IAttackInterval;
 
 public class Jagged extends ClansRune implements IAttackInterval {
 
     protected Jagged() {
-        super("Jagged", UnitType.STUN);
+        super("Jagged", RuneType.PREFIX, UnitType.STUN);
     }
 
     @Override

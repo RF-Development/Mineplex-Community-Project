@@ -1,12 +1,14 @@
 package club.mineplex.core.mineplex.clans.runes.weapon;
 
+import club.mineplex.core.ValueRange;
 import club.mineplex.core.mineplex.clans.ClansRune;
+import club.mineplex.core.mineplex.clans.RuneType;
 import club.mineplex.core.mineplex.clans.shop.IAttackInterval;
 
 public class Flaming extends ClansRune implements IAttackInterval {
 
     protected Flaming() {
-        super("Flaming", UnitType.TICKS, 60F, 120F, false);
+        super("Flaming", RuneType.SUPER_PREFIX, UnitType.TICKS, new ValueRange(60F, 120F));
     }
 
     @Override

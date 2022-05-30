@@ -1,59 +1,44 @@
 package club.mineplex.core.mineplex.clans;
 
+import club.mineplex.core.ValueRange;
+
 public abstract class ClansRune {
 
     private final String name;
     private final UnitType unit;
-    private final float minimum;
-    private final float maximum;
-    private final boolean percentageBased;
+    private final RuneType type;
+    private final ValueRange valueRange;
 
-    protected ClansRune(final String name, final UnitType unit, final float minimum,
-                        final float maximum, final boolean percentageBased) {
+    protected ClansRune(final String name, final RuneType type, final UnitType unit, final ValueRange valueRange) {
         this.name = name;
         this.unit = unit;
-        this.minimum = minimum;
-        this.maximum = maximum;
-        this.percentageBased = percentageBased;
-        if (maximum <= minimum) {
-            throw new IllegalArgumentException("Maximum value cannot be lower than minimum");
+        this.type = type;
+        if (!this.unit.hasRange && valueRange != null) {
+            throw new UnsupportedOperationException("This rune cannot have a range because it's a unit with no value.");
         }
-        if (maximum < 0 || minimum < 0) {
-            throw new IllegalArgumentException("Range values must be above or equal to 0");
-        }
+        this.valueRange = valueRange;
     }
 
-    protected ClansRune(final String name, final UnitType unit) {
-        if (unit.hasRange) {
-            throw new UnsupportedOperationException(unit.name() + " must have a specified range!");
-        }
+    protected ClansRune(final String name, final RuneType type, final UnitType unit) {
+        this(name, type, unit, null);
+    }
 
-        this.name = name;
-        this.unit = unit;
-        this.minimum = -1F;
-        this.maximum = -1F;
-        this.percentageBased = false;
+    public RuneType getType() {
+        return this.type;
     }
 
     public boolean isPercentageBased() {
         if (!this.unit.hasRange) {
             throw new UnsupportedOperationException("This rune does not have a range, and is a unit with no value.");
         }
-        return this.percentageBased;
+        return this.valueRange != null;
     }
 
-    public final float getMinimum() {
+    public ValueRange getValueRange() {
         if (!this.unit.hasRange) {
             throw new UnsupportedOperationException("This rune does not have a range, and is a unit with no value.");
         }
-        return this.minimum;
-    }
-
-    public final float getMaximum() {
-        if (!this.unit.hasRange) {
-            throw new UnsupportedOperationException("This rune does not have a range, and is a unit with no value.");
-        }
-        return this.maximum;
+        return this.valueRange;
     }
 
     public final String getName() {
@@ -80,7 +65,6 @@ public abstract class ClansRune {
         public boolean hasRange() {
             return this.hasRange;
         }
-
     }
 
 }
